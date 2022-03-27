@@ -18,13 +18,13 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">pasajeroId</th>
-      <th scope="col">pasajero_nombre</th>
-      <th scope="col">nacionalidad</th>
-      <th scope="col">fecha_ingreso</th>
-      <th scope="col">fecha_salida</th>
-      <th scope="col">numero_habitacion</th>
-      <th scope="col">tipo_paquete</th>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Nacionalidad</th>
+      <th scope="col">Fecha Ingreso</th>
+      <th scope="col">Fecha Salida</th>
+      <th scope="col">Número Habitacion</th>
+      <th scope="col">Tipo Paquete</th>
     </tr>
   </thead>
   <tbody>
@@ -32,8 +32,8 @@
       <td>{{ p.pasajeroId }}</td>
       <td>{{ p.pasajero_nombre }}</td>
       <td>{{ p.nacionalidad }}</td>
-      <td>{{ p.fecha_ingreso }}</td>
-      <td>{{ p.fecha_salida }}</td>
+      <td>{{ p.fecha_ingreso | date:'d MMMM, y'}}</td>
+      <td>{{ p.fecha_salida | date:'d MMMM, y'}}</td>
       <td>{{ p.numero_habitacion }}</td>
       <td>{{ p.tipo_paquete }}</td>
     </tr>
