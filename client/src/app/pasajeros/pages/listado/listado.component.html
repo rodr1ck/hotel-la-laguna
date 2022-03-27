@@ -1,0 +1,41 @@
+<h2 class="passenger-title h2 text-center text-primary">
+  Lista de Pasajeros en el Hotel
+</h2>
+
+<div
+  style="
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+  "
+>
+  <button class="text-primary me-1" [routerLink]="['/pasajeros/nuevo']">
+    Agregar Pasajero
+  </button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">pasajeroId</th>
+      <th scope="col">pasajero_nombre</th>
+      <th scope="col">nacionalidad</th>
+      <th scope="col">fecha_ingreso</th>
+      <th scope="col">fecha_salida</th>
+      <th scope="col">numero_habitacion</th>
+      <th scope="col">tipo_paquete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pasajero">
+      <td>{{ p.pasajeroId }}</td>
+      <td>{{ p.pasajero_nombre }}</td>
+      <td>{{ p.nacionalidad }}</td>
+      <td>{{ p.fecha_ingreso }}</td>
+      <td>{{ p.fecha_salida }}</td>
+      <td>{{ p.numero_habitacion }}</td>
+      <td>{{ p.tipo_paquete }}</td>
+    </tr>
+  </tbody>
+</table>
