@@ -5,7 +5,7 @@ Permite agregar pasajeros y eliminarlos(una vez que se van del hotel).
 
 ## Como ejecutar este proyecto?
 
--   [ ]  Para ejecutar este proyecto se requiere ejercutar el backend en springboot y el frontend en react js.
+-   [ ]  Para ejecutar este proyecto se requiere ejercutar el backend en springboot y el frontend en Angular con ts.
 
 ### Clonar el proyecto 
 ```
