@@ -1,1 +1,83 @@
-<p>nuevo works!</p>
+<div class="container">
+  <h2 class="passenger-title h2 text-center text-primary">
+    Registrar un Nuevo Pasajero
+  </h2>
+<div [ngStyle]="formStyle">
+  <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+    <div class="form-group row">
+      <label class="col-form-label">Nombre</label>
+      <div class="">
+        <input
+          type="text"
+          name="pasajero_nombre"
+          placeholder="Ingresa Nombre"
+          formControlName="pasajero_nombre"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Nacionalidad</label>
+      <div class="">
+        <input
+          type="text"
+          name="nacionalidad"
+          placeholder="Ingrese nacionalidad"
+          formControlName="nacionalidad"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Número Habitación</label>
+      <div class="">
+        <input
+          type="text"
+          name="numero_habitacion"
+          placeholder="Ingrese número habitación"
+          formControlName="numero_habitacion"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Fecha Ingreso</label>
+      <div class="">
+        <input
+          type="text"
+          name="fecha_ingreso"
+          placeholder="Ingrese fecha de ingreso"
+          formControlName="fecha_ingreso"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Fecha Salida</label>
+      <div class="">
+        <input
+          type="text"
+          name="fecha_salida"
+          placeholder="Ingrese fecha de salida"
+          formControlName="fecha_salida"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Tipo Paquete</label>
+      <div class="">
+        <input
+          type="text"
+          name="tipo_paquete"
+          placeholder="Ingrese tipo de paquete"
+          formControlName="tipo_paquete"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">&nbsp;</label>
+      <div class="input-group col">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

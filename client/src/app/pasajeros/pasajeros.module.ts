@@ -6,6 +6,7 @@ import { NuevoComponent } from './pages/nuevo/nuevo.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import localeEsCL from '@angular/common/locales/es-CL';
+import { ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(localeEsCL);
 
@@ -17,7 +18,8 @@ registerLocaleData(localeEsCL);
   ],
   imports: [
     CommonModule,
-    PasajerosRoutingModule
+    PasajerosRoutingModule,
+    ReactiveFormsModule
   ],
 	providers: [{ provide: LOCALE_ID, useValue: 'es-CL' }],
 })

@@ -2,14 +2,7 @@
   Lista de Pasajeros en el Hotel
 </h2>
 
-<div
-  style="
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 20px;
-  "
->
+<div [ngStyle]="buttonStyle">
   <button class="text-primary me-1" [routerLink]="['/pasajeros/nuevo']">
     Agregar Pasajero
   </button>
@@ -25,6 +18,7 @@
       <th scope="col">Fecha Salida</th>
       <th scope="col">Número Habitacion</th>
       <th scope="col">Tipo Paquete</th>
+      <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>
@@ -32,10 +26,11 @@
       <td>{{ p.pasajeroId }}</td>
       <td>{{ p.pasajero_nombre }}</td>
       <td>{{ p.nacionalidad }}</td>
-      <td>{{ p.fecha_ingreso | date:'d MMMM, y'}}</td>
-      <td>{{ p.fecha_salida | date:'d MMMM, y'}}</td>
+      <td>{{ p.fecha_ingreso | date: "d MMMM, y" }}</td>
+      <td>{{ p.fecha_salida | date: "d MMMM, y" }}</td>
       <td>{{ p.numero_habitacion }}</td>
       <td>{{ p.tipo_paquete }}</td>
+      <td><button (click)="delete(p.pasajeroId)">Eliminar</button><button class="ms-1" [routerLink]="['/pasajeros/editar', p.pasajeroId]">Editar</button></td>
     </tr>
   </tbody>
 </table>

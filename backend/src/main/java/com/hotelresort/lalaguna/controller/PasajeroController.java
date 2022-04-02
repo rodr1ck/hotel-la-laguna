@@ -80,6 +80,7 @@ public class PasajeroController {
             @ApiResponse(code = 405, message = "No se encuentra el pasajero en la BD"),
             @ApiResponse(code = 200, message = "Petición OK")})
     @PutMapping
+    @CrossOrigin
     public ResponseEntity<Pasajero> modificar(@Valid @RequestBody Pasajero pasajero) {
         Pasajero obj = pasajeroService.update(pasajero);
         return new ResponseEntity<Pasajero>(obj, HttpStatus.OK);
@@ -96,6 +97,7 @@ public class PasajeroController {
             @ApiResponse(code = 405, message = "No se encuentra el pasajero en la BD"),
             @ApiResponse(code = 200, message = "Petición OK")})
     @DeleteMapping("/{id}")
+    @CrossOrigin
     public ResponseEntity<Object> eliminar(@PathVariable("id") Integer id) throws Exception {
         pasajeroService.delete(id);
         return new ResponseEntity<Object>(HttpStatus.OK);

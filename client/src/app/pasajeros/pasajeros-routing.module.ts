@@ -6,7 +6,7 @@ import { NuevoComponent } from './pages/nuevo/nuevo.component';
 
 const routes: Routes = [{ path: '', children: [
   { path: 'nuevo', component: NuevoComponent },
-  { path: 'editar', component: EditarComponent },
+  { path: 'editar/:id', component: EditarComponent },
   { path: 'listado', component: ListadoComponent },
   { path: '**', redirectTo: 'listado' },
 ] }];
